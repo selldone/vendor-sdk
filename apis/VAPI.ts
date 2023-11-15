@@ -484,6 +484,15 @@ export default class VAPI {
     return `${this.selldone_vapi_url}/vendors/${vendor_id}/embed-patterns/product`;
   }
 
+  PUT_MY_VENDOR_PRODUCT_SET_TRANSLATIONS(vendor_id:string|number,product_id:number|string,key:string) {
+    return `${this.selldone_vapi_url}/vendors/${vendor_id}/products/${product_id}/translations/${key}`;
+  }
+  PUT_MY_VENDOR_CATEGORY_SET_TRANSLATIONS(vendor_id:string|number,category_id:number|string,key:string) {
+    return `${this.selldone_vapi_url}/vendors/${vendor_id}/categories/${category_id}/translations/${key}`;
+  }
+  PUT_MY_VENDOR_CROSS_SELL_SET_TRANSLATIONS(vendor_id:string|number,product_id:number|string,cross_sell_id:number|string,key:string) {
+    return `${this.selldone_vapi_url}/vendors/${vendor_id}/products/${product_id}/cross-sells/${cross_sell_id}/translations/${key}`;
+  }
   //―――――――――――――――――――――― Shop > Category ――――――――――――――――――――
 
   GET_MY_VENDOR_CATEGORIES(vendor_id: string | number) {
