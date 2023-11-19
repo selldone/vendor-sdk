@@ -1,3 +1,5 @@
+![Selldone Official Vendor Panel SDK](_docs/images/banner-vendor-sdk.jpg)
+
 # Selldone ⮕ Vendor SDK
 
 * **Mode:** 🌍 Public
