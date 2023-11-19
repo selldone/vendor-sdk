@@ -1,4 +1,4 @@
-import { APIAbstract } from "../../../core/server/APIAbstract";
+import { APIAbstract } from "@core/server/APIAbstract";
 import list from "./requests/vapi.products.list.get";
 import changeCategory from "./requests/vapi.product.change-category.put";
 import getInfo from "./requests/vapi.product.info.get";

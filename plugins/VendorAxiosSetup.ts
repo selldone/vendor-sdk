@@ -1,4 +1,4 @@
-import SetupService from "../../../core/server/SetupService";
+import SetupService from "@core/server/SetupService";
 
 export function VendorAxiosSetup() {
   window.axios = require("axios");
