@@ -806,6 +806,14 @@ export default class VAPI {
     return `${this.selldone_vapi_url}/vendors/${vendor_id}/products/${product_id}/includes`;
   }
 
+  //―――――――――――――――――――――― Shop > Product > Category ――――――――――――――――――――
+  POST_MY_VENDOR_PRODUCT_SET_SHORTCUT_CATEGORIES(
+      vendor_id: string | number,
+      product_id: string | number
+  ) {
+    return `${this.selldone_vapi_url}/vendors/${vendor_id}/products/${product_id}/shortcuts`;
+  }
+
   //―――――――――――――――――――――― AI (CI) ――――――――――――――――――――
 
   POST_MY_VENDOR_AI_PRODUCT_AUTO_CREATE_SPEC(
