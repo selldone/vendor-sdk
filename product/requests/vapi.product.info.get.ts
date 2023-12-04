@@ -31,7 +31,7 @@ import type{ProductRating} from "@core/models/shop/product/product-rating.model"
 import type{ProductFile} from "@core/models/shop/product/product-file.model";
 import type{ProductData} from "@core/models/shop/product/product-data.model";
 import {DeliveryStateCode} from "@core/enums/delivery/DeliveryStateCode";
-import {OrderTypeCode} from "@core/models/shop/order/order-type.model";
+import {OrderTypeCode} from "@core/enums/order/OrderTypeCode";
 
 export default function getInfo(
   this: VapiProduct,
