@@ -12,7 +12,7 @@
  * Tread carefully, for you're treading on dreams.
  */
 
-import VAPI from "./apis/VAPI";
+import { VAPI } from "./apis/VAPI";
 import { VapiPage } from "./page/VapiPage";
 import { VendorAxiosSetup } from "./plugins/VendorAxiosSetup";
 import { VapiProduct } from "./product/VapiProduct";

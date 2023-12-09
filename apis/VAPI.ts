@@ -12,9 +12,9 @@
  * Tread carefully, for you're treading on dreams.
  */
 
-import SetupService from "@core/server/SetupService";
+import { SetupService } from "@core/server/SetupService";
 
-export default class VAPI {
+export class VAPI {
   selldone_vapi_url = "";
 
   constructor() {
