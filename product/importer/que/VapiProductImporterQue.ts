@@ -12,20 +12,25 @@
  * Tread carefully, for you're treading on dreams.
  */
 
-import { APIAbstract } from "@core/server/APIAbstract";
-import list from "./requests/vapi.products.list.get";
-import changeCategory from "./requests/vapi.product.change-category.put";
-import getInfo from "./requests/vapi.product.info.get";
-import vapiProductImporterPost from "@sdk-vendor/product/importer/requests/vapiProductImporterPost";
-import {VapiProductImporter} from "@sdk-vendor/product/importer/VapiProductImporter";
+import {APIAbstract} from "@core/server/APIAbstract";
+import vapiProductImporterQueImagesGet
+  from "@sdk-vendor/product/importer/que/requests/vapi.product.importer.que.images.get";
+import vapiProductImporterQueImagesDelete
+  from "@sdk-vendor/product/importer/que/requests/vapi.product.importer.que.images.delete";
+import apiProductImporterQueImageSyncPut
+  from "@sdk-vendor/product/importer/que/requests/vapi.product.importer.que.image.sync.put";
+import apiProductImporterQueProductsGet
+  from "@sdk-vendor/product/importer/que/requests/vapi.product.importer.que.products.get";
+import apiProductImporterQueProductsDelete
+  from "@sdk-vendor/product/importer/que/requests/vapi.product.importer.que.products.delete";
 
-export class VapiProduct extends APIAbstract {
+export class VapiProductImporterQue extends APIAbstract {
+  public images = vapiProductImporterQueImagesGet;
+  public removeImage = vapiProductImporterQueImagesDelete;
+  public syncImage = apiProductImporterQueImageSyncPut;
 
-  public list = list;
-  public changeCategory = changeCategory;
-  public getInfo = getInfo;
-  public importer = new VapiProductImporter();
-
+  public products = apiProductImporterQueProductsGet;
+  public removeProduct = apiProductImporterQueProductsDelete;
 
   constructor() {
     super();

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2023. Selldone® Business OS™
+ * Copyright (c) 2023-2024. Selldone® Business OS™
  *
  * Author: M.Pajuhaan
  * Web: https://selldone.com
@@ -12,26 +12,26 @@
  * Tread carefully, for you're treading on dreams.
  */
 
-import { APIAbstract } from "@core/server/APIAbstract";
-import list from "./requests/vapi.products.list.get";
-import changeCategory from "./requests/vapi.product.change-category.put";
-import getInfo from "./requests/vapi.product.info.get";
-import vapiProductImporterPost from "@sdk-vendor/product/importer/requests/vapiProductImporterPost";
-import {VapiProductImporter} from "@sdk-vendor/product/importer/VapiProductImporter";
+import {ApiProductImporterQue} from "@sdk-backoffice/product/importer/que/ApiProductImporterQue";
 
-export class VapiProduct extends APIAbstract {
+export default function apiProductImporterQueImageSyncPut(
+  this: ApiProductImporterQue,
+  vendor_id: number,
+  item_id: number,
+) {
+  const url = window.VAPI.PUT_MY_VENDOR_IMPORT_IMAGE_ITEM_TRY(vendor_id, item_id);
+  return this.putNow<vapi.product.importer.que.image.sync.put.IResponse>(url);
+}
 
-  public list = list;
-  public changeCategory = changeCategory;
-  public getInfo = getInfo;
-  public importer = new VapiProductImporter();
-
-
-  constructor() {
-    super();
-  }
-} //█████████████████████████████████████████████████████████████
+//█████████████████████████████████████████████████████████████
 //―――――――――――――――― 🦫 Types ――――――――――――――――
 //█████████████████████████████████████████████████████████████
 
-export namespace VapiProduct {}
+export namespace vapi.product.importer.que.image.sync.put {
+  export interface IResponse {
+    success: boolean;
+    id: number;
+  }
+
+  export interface IResponse {}
+}

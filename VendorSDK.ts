@@ -18,7 +18,7 @@ import { VendorAxiosSetup } from "./plugins/VendorAxiosSetup";
 import { VapiProduct } from "./product/VapiProduct";
 import { VapiArticle } from "./article/VapiArticle";
 
-const SDK_VERSION = "0.01";
+const SDK_VERSION = "0.02";
 // Extend the Window interface to recognize the properties you add to the global window object.
 declare global {
   interface Window {

@@ -12,20 +12,16 @@
  * Tread carefully, for you're treading on dreams.
  */
 
-import { APIAbstract } from "@core/server/APIAbstract";
-import list from "./requests/vapi.products.list.get";
-import changeCategory from "./requests/vapi.product.change-category.put";
-import getInfo from "./requests/vapi.product.info.get";
+import {APIAbstract} from "@core/server/APIAbstract";
 import vapiProductImporterPost from "@sdk-vendor/product/importer/requests/vapiProductImporterPost";
-import {VapiProductImporter} from "@sdk-vendor/product/importer/VapiProductImporter";
+import apiProductImporterInfoGet from "@sdk-vendor/product/importer/requests/vapi.products.importer.info.get";
+import {VapiProductImporterQue} from "@sdk-vendor/product/importer/que/VapiProductImporterQue";
 
-export class VapiProduct extends APIAbstract {
+export class VapiProductImporter extends APIAbstract {
+  public send = vapiProductImporterPost;
+  public info = apiProductImporterInfoGet;
 
-  public list = list;
-  public changeCategory = changeCategory;
-  public getInfo = getInfo;
-  public importer = new VapiProductImporter();
-
+  public que = new VapiProductImporterQue();
 
   constructor() {
     super();
