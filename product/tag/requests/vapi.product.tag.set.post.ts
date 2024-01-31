@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2023. Selldone® Business OS™
+ * Copyright (c) 2023-2024. Selldone® Business OS™
  *
  * Author: M.Pajuhaan
  * Web: https://selldone.com
@@ -12,27 +12,28 @@
  * Tread carefully, for you're treading on dreams.
  */
 
-import {APIAbstract} from "@core/server/APIAbstract";
-import list from "./requests/vapi.products.list.get";
-import changeCategory from "./requests/vapi.product.change-category.put";
-import getInfo from "./requests/vapi.product.info.get";
-import {VapiProductImporter} from "@sdk-vendor/product/importer/VapiProductImporter";
 import {VapiProductTag} from "@sdk-vendor/product/tag/VapiProductTag";
 
-export class VapiProduct extends APIAbstract {
-  public list = list;
-  public changeCategory = changeCategory;
-  public getInfo = getInfo;
+export default function vapiProductTagSetPost(
+  this: VapiProductTag,
+  vendor_id: number,
+  product_id: number,
+  tags: string[] | null,
+) {
+  const url = window.VAPI.POST_MY_VENDOR_PRODUCT_SET_TAGS(
+    vendor_id,
+    product_id,
+  );
+  return this.postNow<vapi.product.tag.set.post.IResponse>(url, { tags: tags });
+}
 
-  public importer = new VapiProductImporter();
-
-  public tags = new VapiProductTag();
-
-  constructor() {
-    super();
-  }
-} //█████████████████████████████████████████████████████████████
+//█████████████████████████████████████████████████████████████
 //―――――――――――――――― 🦫 Types ――――――――――――――――
 //█████████████████████████████████████████████████████████████
 
-export namespace VapiProduct {}
+export namespace vapi.product.tag.set.post {
+  export interface IResponse {
+    tags: string[];
+    success: boolean;
+  }
+}

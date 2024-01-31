@@ -13,20 +13,10 @@
  */
 
 import {APIAbstract} from "@core/server/APIAbstract";
-import list from "./requests/vapi.products.list.get";
-import changeCategory from "./requests/vapi.product.change-category.put";
-import getInfo from "./requests/vapi.product.info.get";
-import {VapiProductImporter} from "@sdk-vendor/product/importer/VapiProductImporter";
-import {VapiProductTag} from "@sdk-vendor/product/tag/VapiProductTag";
+import vapiProductTagSetPost from "@sdk-vendor/product/tag/requests/vapi.product.tag.set.post";
 
-export class VapiProduct extends APIAbstract {
-  public list = list;
-  public changeCategory = changeCategory;
-  public getInfo = getInfo;
-
-  public importer = new VapiProductImporter();
-
-  public tags = new VapiProductTag();
+export class VapiProductTag extends APIAbstract {
+  public set = vapiProductTagSetPost;
 
   constructor() {
     super();
