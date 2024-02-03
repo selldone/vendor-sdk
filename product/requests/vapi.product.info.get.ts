@@ -33,7 +33,7 @@ import type{ProductData} from "@core/models/shop/product/product-data.model";
 import {DeliveryStateCode} from "@core/enums/delivery/DeliveryStateCode";
 import {OrderTypeCode} from "@core/enums/order/OrderTypeCode";
 
-export default function getInfo(
+export default function vapiProductInfoGet(
   this: VapiProduct,
   vendor_id: number,
   product_id: number,

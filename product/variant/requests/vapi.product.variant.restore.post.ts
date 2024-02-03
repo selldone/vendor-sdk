@@ -12,40 +12,32 @@
  * Tread carefully, for you're treading on dreams.
  */
 
-import {VapiProduct} from "../VapiProduct";
+import {VapiProductVariant} from "@sdk-vendor/product/variant/VapiProductVariant";
+import {ProductVariant} from "@core/models/shop/product/product_variant.model";
 
-/**
- * Changes the category of a given product.
- *
- * @param vendor_id - The ID of the shop.
- * @param product_id - The ID of the product.
- * @param category_id - The ID of the category to which the product should be moved. Use `null` if removing from a category.
- * @param bundle - An array of product IDs representing the bundle. Use `null` if there's no bundle.
- *
- * @returns Promise promise with the response of the change category action.
- */
-export default function vapiProductChangeCategoryPut(
-  this: VapiProduct,
+export default function vapiProductVariantRestorePost(
+  this: VapiProductVariant,
   vendor_id: number,
   product_id: number,
-  category_id: number | null,
-  bundle?: number[] | null,
+  variant_id: number,
 ) {
-  const params = { category_id: category_id, bundle: bundle };
-  const url = window.VAPI.PUT_MY_VENDOR_SET_PRODUCT_CATEGORY(
+  const url = window.VAPI.POST_MY_VENDOR_RESTORE_DELETED_VARIANT(
     vendor_id,
     product_id,
+    variant_id,
   );
-  return this.putNow<vapi.product.change_category.put.IResponse>(url, params);
+  return this.postNow<vapi.product.variant.restore.post.IResponse>(url,null);
 }
 
 //█████████████████████████████████████████████████████████████
 //―――――――――――――――― 🦫 Types ――――――――――――――――
 //█████████████████████████████████████████████████████████████
 
-export namespace vapi.product.change_category.put {
+export namespace vapi.product.variant.restore.post {
   export interface IResponse {
     success: boolean;
-    count: number; // Count of products change
+    variants: ProductVariant[];
+    quantity: number;
+    variant_id: number; // Remove variant id
   }
 }

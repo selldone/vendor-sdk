@@ -12,29 +12,13 @@
  * Tread carefully, for you're treading on dreams.
  */
 
+import vapiProductVariantRemove from "@sdk-vendor/product/variant/requests/vapi.product.variant.remove";
+import vapiProductVariantRestorePost from "@sdk-vendor/product/variant/requests/vapi.product.variant.restore.post";
 import {APIAbstract} from "@core/server/APIAbstract";
-import vapiProductsListGet from "./requests/vapi.products.list.get";
-import vapiProductChangeCategoryPut from "./requests/vapi.product.change-category.put";
-import vapiProductInfoGet from "./requests/vapi.product.info.get";
-import {VapiProductImporter} from "@sdk-vendor/product/importer/VapiProductImporter";
-import {VapiProductTag} from "@sdk-vendor/product/tag/VapiProductTag";
-import vapiProductSetQuantityPost from "@sdk-vendor/product/requests/vapi.product.set-quantity.post";
-import {VapiProductVariant} from "@sdk-vendor/product/variant/VapiProductVariant";
 
-export class VapiProduct extends APIAbstract {
-  public list = vapiProductsListGet;
-  public changeCategory = vapiProductChangeCategoryPut;
-  public getInfo = vapiProductInfoGet;
-
-  public setQuantity = vapiProductSetQuantityPost;
-
-
-  public importer = new VapiProductImporter();
-
-  public tags = new VapiProductTag();
-
-  public variants = new VapiProductVariant();
-
+export class VapiProductVariant extends APIAbstract {
+  public remove = vapiProductVariantRemove;
+  public restore = vapiProductVariantRestorePost;
 
   constructor() {
     super();
@@ -43,4 +27,4 @@ export class VapiProduct extends APIAbstract {
 //―――――――――――――――― 🦫 Types ――――――――――――――――
 //█████████████████████████████████████████████████████████████
 
-export namespace VapiProduct {}
+export namespace VapiProductVariant {}

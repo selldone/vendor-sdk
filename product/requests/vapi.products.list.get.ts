@@ -16,7 +16,7 @@ import {VapiProduct} from "../VapiProduct";
 import {Category} from "@core/models/shop/category/category.model";
 import {Product} from "@core/models/shop/product/product.model";
 
-export default function list(
+export default function vapiProductsListGet(
   this: VapiProduct,
   vendor_id: number,
   offset: number,

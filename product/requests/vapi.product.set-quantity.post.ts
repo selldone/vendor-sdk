@@ -14,29 +14,18 @@
 
 import {VapiProduct} from "../VapiProduct";
 
-/**
- * Changes the category of a given product.
- *
- * @param vendor_id - The ID of the shop.
- * @param product_id - The ID of the product.
- * @param category_id - The ID of the category to which the product should be moved. Use `null` if removing from a category.
- * @param bundle - An array of product IDs representing the bundle. Use `null` if there's no bundle.
- *
- * @returns Promise promise with the response of the change category action.
- */
-export default function vapiProductChangeCategoryPut(
+export default function vapiProductSetQuantityPost(
   this: VapiProduct,
   vendor_id: number,
   product_id: number,
-  category_id: number | null,
-  bundle?: number[] | null,
+  quantity: number,
 ) {
-  const params = { category_id: category_id, bundle: bundle };
-  const url = window.VAPI.PUT_MY_VENDOR_SET_PRODUCT_CATEGORY(
+  const params = { quantity: quantity };
+  const url = window.VAPI.POST_MY_VENDOR_PRODUCT_QUANTITY(
     vendor_id,
     product_id,
   );
-  return this.putNow<vapi.product.change_category.put.IResponse>(url, params);
+  return this.postNow<vapi.product.change_category.put.IResponse>(url, params);
 }
 
 //█████████████████████████████████████████████████████████████
@@ -46,6 +35,6 @@ export default function vapiProductChangeCategoryPut(
 export namespace vapi.product.change_category.put {
   export interface IResponse {
     success: boolean;
-    count: number; // Count of products change
+    quantity: number;
   }
 }
