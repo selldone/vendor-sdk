@@ -12,11 +12,12 @@
  * Tread carefully, for you're treading on dreams.
  */
 
-import { VAPI } from "./apis/VAPI";
-import { VapiPage } from "./page/VapiPage";
-import { VendorAxiosSetup } from "./plugins/VendorAxiosSetup";
-import { VapiProduct } from "./product/VapiProduct";
-import { VapiArticle } from "./article/VapiArticle";
+import {VAPI} from "./apis/VAPI";
+import {VapiPage} from "./page/VapiPage";
+import {VendorAxiosSetup} from "./plugins/VendorAxiosSetup";
+import {VapiProduct} from "./product/VapiProduct";
+import {VapiArticle} from "./article/VapiArticle";
+import {VapiLogistic} from "@sdk-vendor/logistic/VapiLogistic";
 
 const SDK_VERSION = "0.02";
 // Extend the Window interface to recognize the properties you add to the global window object.
@@ -32,6 +33,9 @@ declare global {
 
       // Article:
       article: VapiArticle;
+
+      // Logistic:
+      logistic: VapiLogistic;
     };
   }
 }
@@ -51,7 +55,12 @@ export class VendorSDK {
     window.$vendor = {
       page: new VapiPage(),
       product: new VapiProduct(),
+
+      // Article:
       article: new VapiArticle(),
+
+      // Logistic:
+      logistic: new VapiLogistic(),
     };
   }
 }

@@ -20,6 +20,7 @@ import {VapiProductImporter} from "@sdk-vendor/product/importer/VapiProductImpor
 import {VapiProductTag} from "@sdk-vendor/product/tag/VapiProductTag";
 import vapiProductSetQuantityPost from "@sdk-vendor/product/requests/vapi.product.set-quantity.post";
 import {VapiProductVariant} from "@sdk-vendor/product/variant/VapiProductVariant";
+import {VapiProductVendor} from "@sdk-vendor/product/vendor/VapiProductVendor";
 
 export class VapiProduct extends APIAbstract {
   public list = vapiProductsListGet;
@@ -28,13 +29,13 @@ export class VapiProduct extends APIAbstract {
 
   public setQuantity = vapiProductSetQuantityPost;
 
-
   public importer = new VapiProductImporter();
 
   public tags = new VapiProductTag();
 
   public variants = new VapiProductVariant();
 
+  public vendor = new VapiProductVendor();
 
   constructor() {
     super();
