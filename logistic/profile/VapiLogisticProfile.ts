@@ -12,12 +12,12 @@
  * Tread carefully, for you're treading on dreams.
  */
 
-import vapiProductLogisticProfilesListGet
-  from "@sdk-vendor/logistic/profile/requests/vapi.product.logistic.profiles.list.get";
+import vapiLogisticProfilesListGet
+  from "@sdk-vendor/logistic/profile/requests/vapi.logistic.profiles.list.get";
 import {APIAbstract} from "@core/server/APIAbstract";
 
 export class VapiLogisticProfile extends APIAbstract {
-  public list = vapiProductLogisticProfilesListGet;
+  public list = vapiLogisticProfilesListGet;
 
   constructor() {
     super();

@@ -16,16 +16,16 @@ import {LogisticProfileType} from "@core/enums/logistic/LogisticProfileType";
 import {LogisticProfile} from "@core/models/shop/logistic/profile/logistic-profile.model";
 import {VapiLogisticProfile} from "@sdk-vendor/logistic/profile/VapiLogisticProfile";
 
-export default function vapiProductLogisticProfilesListGet(
+export default function vapiLogisticProfilesListGet(
   this: VapiLogisticProfile,
   vendor_id: number,
   offset: number,
   limit: number,
-  options?: vapi.product.logistic.profiles.list.get.IParams,
+  options?: vapi.logistic.profiles.list.get.IParams,
 ) {
   const params = { offset: offset, limit: limit, ...options };
   const url = window.VAPI.GET_MY_VENDOR_LOGISTIC_PROFILES(vendor_id);
-  return this.getNow<vapi.product.logistic.profiles.list.get.IResponse>(
+  return this.getNow<vapi.logistic.profiles.list.get.IResponse>(
     url,
     params,
   );
@@ -35,7 +35,7 @@ export default function vapiProductLogisticProfilesListGet(
 //―――――――――――――――― 🦫 Types ――――――――――――――――
 //█████████████████████████████████████████████████████████████
 
-export namespace vapi.product.logistic.profiles.list.get {
+export namespace vapi.logistic.profiles.list.get {
   export interface IResponse {
     profiles: LogisticProfile[];
     total: number;
