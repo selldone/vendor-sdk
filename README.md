@@ -1,6 +1,7 @@
-![License](https://img.shields.io/github/license/selldone/vendor-sdk.svg)
-
 ![Selldone Official Vendor Panel SDK](_docs/images/banner-vendor-sdk.jpg)
+
+![Selldone](https://img.shields.io/badge/type-Selldone-f39f37?style=flat&label=Vendor&labelColor=%23567&color=%23000)
+![License](https://img.shields.io/github/license/selldone/vendor-sdk.svg)
 
 # Selldone ⮕ Vendor SDK
 
