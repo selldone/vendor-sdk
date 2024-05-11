@@ -13,7 +13,7 @@
  */
 
 import { VapiPage } from "../VapiPage";
-import { AugmentHelper } from "@core/helper/augment/AugmentHelper";
+import { AugmentHelper } from "@selldone/core-js/helper/augment/AugmentHelper";
 
 export default function getPageAugment(
   this: VapiPage,

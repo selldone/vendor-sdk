@@ -12,7 +12,7 @@
  * Tread carefully, for you're treading on dreams.
  */
 
-import { SetupService } from "@core/server/SetupService";
+import { SetupService } from "@selldone/core-js/server/SetupService";
 
 export class VAPI {
   selldone_vapi_url = "";

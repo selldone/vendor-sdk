@@ -12,7 +12,7 @@
  * Tread carefully, for you're treading on dreams.
  */
 
-import {APIAbstract} from "@core/server/APIAbstract";
+import {APIAbstract} from "@selldone/core-js/server/APIAbstract";
 import {VapiLogisticProfile} from "@sdk-vendor/logistic/profile/VapiLogisticProfile";
 
 export class VapiLogistic extends APIAbstract {

@@ -14,7 +14,7 @@
 
 import vapiLogisticProfilesListGet
   from "@sdk-vendor/logistic/profile/requests/vapi.logistic.profiles.list.get";
-import {APIAbstract} from "@core/server/APIAbstract";
+import {APIAbstract} from "@selldone/core-js/server/APIAbstract";
 
 export class VapiLogisticProfile extends APIAbstract {
   public list = vapiLogisticProfilesListGet;

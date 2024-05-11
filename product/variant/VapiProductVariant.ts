@@ -14,7 +14,7 @@
 
 import vapiProductVariantRemove from "@sdk-vendor/product/variant/requests/vapi.product.variant.remove";
 import vapiProductVariantRestorePost from "@sdk-vendor/product/variant/requests/vapi.product.variant.restore.post";
-import {APIAbstract} from "@core/server/APIAbstract";
+import {APIAbstract} from "@selldone/core-js/server/APIAbstract";
 
 export class VapiProductVariant extends APIAbstract {
   public remove = vapiProductVariantRemove;

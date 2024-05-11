@@ -12,7 +12,7 @@
  * Tread carefully, for you're treading on dreams.
  */
 
-import {ImportQueImage} from "@core/models/shop/importer/import-que-image.model";
+import {ImportQueImage} from "@selldone/core-js/models/shop/importer/import-que-image.model";
 import {VapiProductImporterQue} from "@sdk-vendor/product/importer/que/VapiProductImporterQue";
 
 export default function vapiProductImporterQueImagesGet(

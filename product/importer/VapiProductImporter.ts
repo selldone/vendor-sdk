@@ -12,7 +12,7 @@
  * Tread carefully, for you're treading on dreams.
  */
 
-import {APIAbstract} from "@core/server/APIAbstract";
+import {APIAbstract} from "@selldone/core-js/server/APIAbstract";
 import vapiProductImporterPost from "@sdk-vendor/product/importer/requests/vapiProductImporterPost";
 import apiProductImporterInfoGet from "@sdk-vendor/product/importer/requests/vapi.products.importer.info.get";
 import {VapiProductImporterQue} from "@sdk-vendor/product/importer/que/VapiProductImporterQue";

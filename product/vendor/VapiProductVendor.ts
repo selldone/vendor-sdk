@@ -12,7 +12,7 @@
  * Tread carefully, for you're treading on dreams.
  */
 
-import {APIAbstract} from "@core/server/APIAbstract";
+import {APIAbstract} from "@selldone/core-js/server/APIAbstract";
 import vapiProductVendorsListGet from "@sdk-vendor/product/vendor/requests/vapi.product.vendors.list.get";
 
 export class VapiProductVendor extends APIAbstract {

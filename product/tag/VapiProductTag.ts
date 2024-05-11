@@ -12,7 +12,7 @@
  * Tread carefully, for you're treading on dreams.
  */
 
-import {APIAbstract} from "@core/server/APIAbstract";
+import {APIAbstract} from "@selldone/core-js/server/APIAbstract";
 import vapiProductTagSetPost from "@sdk-vendor/product/tag/requests/vapi.product.tag.set.post";
 
 export class VapiProductTag extends APIAbstract {

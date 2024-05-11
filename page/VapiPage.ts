@@ -12,7 +12,7 @@
  * Tread carefully, for you're treading on dreams.
  */
 
-import { APIAbstract } from "@core/server/APIAbstract";
+import { APIAbstract } from "@selldone/core-js/server/APIAbstract";
 import getPageAugment from "./requests/vapi.page.augment.get";
 
 export class VapiPage extends APIAbstract {

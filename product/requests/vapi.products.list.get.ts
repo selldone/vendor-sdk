@@ -13,8 +13,8 @@
  */
 
 import {VapiProduct} from "../VapiProduct";
-import {Category} from "@core/models/shop/category/category.model";
-import {Product} from "@core/models/shop/product/product.model";
+import {Category} from "@selldone/core-js/models/shop/category/category.model";
+import {Product} from "@selldone/core-js/models/shop/product/product.model";
 
 export default function vapiProductsListGet(
   this: VapiProduct,
