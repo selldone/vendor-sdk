@@ -13,6 +13,32 @@
 
 🛍️ Go to the [**Full Storefront Project ▶**](https://github.com/selldone/storefront)
 
+
+## Installation
+
+To install Selldone Core in your project, use the following command:
+
+
+```bash
+npm install @selldone/sdk-vendor
+```
+```bash
+yarn add @selldone/sdk-vendor
+```
+
+## Usage
+
+Here's a basic example to get you started:
+
+```javascript
+import { VendorSDK } from "@selldone/sdk-vendor";
+
+// ━━━ Vendor SDK (vapi) ━━━
+VendorSDK.Setup();
+```
+
+
+
 ---
 
 ## License
