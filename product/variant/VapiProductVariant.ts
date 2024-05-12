@@ -12,8 +12,8 @@
  * Tread carefully, for you're treading on dreams.
  */
 
-import vapiProductVariantRemove from "@sdk-vendor/product/variant/requests/vapi.product.variant.remove";
-import vapiProductVariantRestorePost from "@sdk-vendor/product/variant/requests/vapi.product.variant.restore.post";
+import vapiProductVariantRemove from "../../product/variant/requests/vapi.product.variant.remove";
+import vapiProductVariantRestorePost from "../../product/variant/requests/vapi.product.variant.restore.post";
 import {APIAbstract} from "@selldone/core-js/server/APIAbstract";
 
 export class VapiProductVariant extends APIAbstract {

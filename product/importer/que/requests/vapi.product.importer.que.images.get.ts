@@ -13,7 +13,7 @@
  */
 
 import {ImportQueImage} from "@selldone/core-js/models/shop/importer/import-que-image.model";
-import {VapiProductImporterQue} from "@sdk-vendor/product/importer/que/VapiProductImporterQue";
+import {VapiProductImporterQue} from "../VapiProductImporterQue.ts";
 
 export default function vapiProductImporterQueImagesGet(
   this: VapiProductImporterQue,

@@ -13,7 +13,7 @@
  */
 
 import {APIAbstract} from "@selldone/core-js/server/APIAbstract";
-import {VapiLogisticProfile} from "@sdk-vendor/logistic/profile/VapiLogisticProfile";
+import {VapiLogisticProfile} from "./profile/VapiLogisticProfile.ts";
 
 export class VapiLogistic extends APIAbstract {
   public profile = new VapiLogisticProfile();

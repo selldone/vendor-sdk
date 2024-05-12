@@ -12,7 +12,7 @@
  * Tread carefully, for you're treading on dreams.
  */
 
-import {VapiProductVariant} from "@sdk-vendor/product/variant/VapiProductVariant";
+import {VapiProductVariant} from "../VapiProductVariant.ts";
 import {ProductVariant} from "@selldone/core-js/models/shop/product/product_variant.model";
 
 export default function vapiProductVariantRestorePost(

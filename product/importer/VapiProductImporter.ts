@@ -13,9 +13,9 @@
  */
 
 import {APIAbstract} from "@selldone/core-js/server/APIAbstract";
-import vapiProductImporterPost from "@sdk-vendor/product/importer/requests/vapiProductImporterPost";
-import apiProductImporterInfoGet from "@sdk-vendor/product/importer/requests/vapi.products.importer.info.get";
-import {VapiProductImporterQue} from "@sdk-vendor/product/importer/que/VapiProductImporterQue";
+import vapiProductImporterPost from "../../product/importer/requests/vapiProductImporterPost";
+import apiProductImporterInfoGet from "../../product/importer/requests/vapi.products.importer.info.get";
+import {VapiProductImporterQue} from "./que/VapiProductImporterQue.ts";
 
 export class VapiProductImporter extends APIAbstract {
   public send = vapiProductImporterPost;

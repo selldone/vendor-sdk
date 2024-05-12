@@ -13,7 +13,7 @@
  */
 
 import {APIAbstract} from "@selldone/core-js/server/APIAbstract";
-import vapiProductVendorsListGet from "@sdk-vendor/product/vendor/requests/vapi.product.vendors.list.get";
+import vapiProductVendorsListGet from "../../product/vendor/requests/vapi.product.vendors.list.get";
 
 export class VapiProductVendor extends APIAbstract {
   public list = vapiProductVendorsListGet;

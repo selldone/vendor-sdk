@@ -17,7 +17,7 @@ import {VapiPage} from "./page/VapiPage";
 import {VendorAxiosSetup} from "./plugins/VendorAxiosSetup";
 import {VapiProduct} from "./product/VapiProduct";
 import {VapiArticle} from "./article/VapiArticle";
-import {VapiLogistic} from "@sdk-vendor/logistic/VapiLogistic";
+import {VapiLogistic} from "./logistic/VapiLogistic";
 
 const SDK_VERSION = "0.02";
 // Extend the Window interface to recognize the properties you add to the global window object.

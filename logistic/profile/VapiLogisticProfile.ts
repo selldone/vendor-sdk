@@ -13,7 +13,7 @@
  */
 
 import vapiLogisticProfilesListGet
-  from "@sdk-vendor/logistic/profile/requests/vapi.logistic.profiles.list.get";
+  from "../../logistic/profile/requests/vapi.logistic.profiles.list.get";
 import {APIAbstract} from "@selldone/core-js/server/APIAbstract";
 
 export class VapiLogisticProfile extends APIAbstract {

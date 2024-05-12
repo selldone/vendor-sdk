@@ -16,11 +16,11 @@ import {APIAbstract} from "@selldone/core-js/server/APIAbstract";
 import vapiProductsListGet from "./requests/vapi.products.list.get";
 import vapiProductChangeCategoryPut from "./requests/vapi.product.change-category.put";
 import vapiProductInfoGet from "./requests/vapi.product.info.get";
-import {VapiProductImporter} from "@sdk-vendor/product/importer/VapiProductImporter";
-import {VapiProductTag} from "@sdk-vendor/product/tag/VapiProductTag";
-import vapiProductSetQuantityPost from "@sdk-vendor/product/requests/vapi.product.set-quantity.post";
-import {VapiProductVariant} from "@sdk-vendor/product/variant/VapiProductVariant";
-import {VapiProductVendor} from "@sdk-vendor/product/vendor/VapiProductVendor";
+import {VapiProductImporter} from "./importer/VapiProductImporter.ts";
+import {VapiProductTag} from "./tag/VapiProductTag.ts";
+import vapiProductSetQuantityPost from "../product/requests/vapi.product.set-quantity.post";
+import {VapiProductVariant} from "./variant/VapiProductVariant.ts";
+import {VapiProductVendor} from "./vendor/VapiProductVendor.ts";
 
 export class VapiProduct extends APIAbstract {
   public list = vapiProductsListGet;

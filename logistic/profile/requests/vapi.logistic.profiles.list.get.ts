@@ -14,7 +14,7 @@
 
 import {LogisticProfileType} from "@selldone/core-js/enums/logistic/LogisticProfileType";
 import {LogisticProfile} from "@selldone/core-js/models/shop/logistic/profile/logistic-profile.model";
-import {VapiLogisticProfile} from "@sdk-vendor/logistic/profile/VapiLogisticProfile";
+import {VapiLogisticProfile} from "../VapiLogisticProfile.ts";
 
 export default function vapiLogisticProfilesListGet(
   this: VapiLogisticProfile,

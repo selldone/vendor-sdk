@@ -12,7 +12,7 @@
  * Tread carefully, for you're treading on dreams.
  */
 
-import { VapiProductImporter } from "@sdk-vendor/product/importer/VapiProductImporter";
+import { VapiProductImporter } from "../VapiProductImporter.ts";
 import IProduct = vapi.product.importer.post.IProduct;
 import IHeader = vapi.product.importer.post.IHeader;
 

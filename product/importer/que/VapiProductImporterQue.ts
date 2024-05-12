@@ -14,15 +14,15 @@
 
 import {APIAbstract} from "@selldone/core-js/server/APIAbstract";
 import vapiProductImporterQueImagesGet
-  from "@sdk-vendor/product/importer/que/requests/vapi.product.importer.que.images.get";
+  from "../../../product/importer/que/requests/vapi.product.importer.que.images.get";
 import vapiProductImporterQueImagesDelete
-  from "@sdk-vendor/product/importer/que/requests/vapi.product.importer.que.images.delete";
+  from "../../../product/importer/que/requests/vapi.product.importer.que.images.delete";
 import apiProductImporterQueImageSyncPut
-  from "@sdk-vendor/product/importer/que/requests/vapi.product.importer.que.image.sync.put";
+  from "../../../product/importer/que/requests/vapi.product.importer.que.image.sync.put";
 import apiProductImporterQueProductsGet
-  from "@sdk-vendor/product/importer/que/requests/vapi.product.importer.que.products.get";
+  from "../../../product/importer/que/requests/vapi.product.importer.que.products.get";
 import apiProductImporterQueProductsDelete
-  from "@sdk-vendor/product/importer/que/requests/vapi.product.importer.que.products.delete";
+  from "../../../product/importer/que/requests/vapi.product.importer.que.products.delete";
 
 export class VapiProductImporterQue extends APIAbstract {
   public images = vapiProductImporterQueImagesGet;

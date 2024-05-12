@@ -12,7 +12,7 @@
  * Tread carefully, for you're treading on dreams.
  */
 
-import {VapiProductTag} from "@sdk-vendor/product/tag/VapiProductTag";
+import {VapiProductTag} from "../VapiProductTag.ts";
 
 export default function vapiProductTagSetPost(
   this: VapiProductTag,
