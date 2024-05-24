@@ -1,9 +1,11 @@
 {
   "name": "@selldone/sdk-vendor",
-  "version": "1.5.23",
+  "version": "1.5.24",
   "private": false,
   "type": "module",
   "author": "Mehrdad Pajuhaan <mehrdad@selldone.com> (https://selldone.com)",
+  "description": "SDK to build a custom vendor panel for marketplaces.",
+
   "main": "index.ts",
   "scripts": {
     "build": "tsc",
