@@ -25,12 +25,11 @@ import type {MapTag} from "@selldone/core-js/models/shop/map/map-tag.model";
 import type {ExtraPricing} from "@selldone/core-js/models/shop/extra-pricing/extra-pricing.model";
 import type {ShopInclude} from "@selldone/core-js/models/shop/shop-include/shop-include.model";
 import type {Page} from "@selldone/core-js/models/shop/page/page.model";
-import type {Article} from "@selldone/core-js";
+import {Article, Order} from "@selldone/core-js";
 import type {ProductImage} from "@selldone/core-js/models/shop/product/product-image.model";
 import type {ProductRating} from "@selldone/core-js/models/shop/product/product-rating.model";
 import type {ProductFile} from "@selldone/core-js/models/shop/product/product-file.model";
 import type {ProductData} from "@selldone/core-js/models/shop/product/product-data.model";
-import {DeliveryStateCode} from "@selldone/core-js/enums/delivery/DeliveryStateCode";
 import {OrderTypeCode} from "@selldone/core-js/enums/order/OrderTypeCode";
 
 export default function vapiProductInfoGet(
@@ -141,7 +140,7 @@ export namespace vapi.products.info.get {
     };
     product_data: ProductData[];
     orderQue: {
-      delivery_state: DeliveryStateCode;
+      delivery_state: Order.DeliveryStateCode;
       count: number;
       type: OrderTypeCode;
     }[];
