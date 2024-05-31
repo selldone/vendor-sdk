@@ -25,10 +25,7 @@ export default function vapiLogisticProfilesListGet(
 ) {
   const params = { offset: offset, limit: limit, ...options };
   const url = window.VAPI.GET_MY_VENDOR_LOGISTIC_PROFILES(vendor_id);
-  return this.getNow<vapi.logistic.profiles.list.get.IResponse>(
-    url,
-    params,
-  );
+  return this.getNow<vapi.logistic.profiles.list.get.IResponse>(url, params);
 }
 
 //█████████████████████████████████████████████████████████████
