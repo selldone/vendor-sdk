@@ -543,6 +543,8 @@ export class VAPI {
     return `${this.selldone_vapi_url}/vendors/${vendor_id}/products/${product_id}/cross-sells/${cross_sell_id}/translations/${key}`;
   }
 
+
+
   //―――――――――――――――――――――― Shop > Category ――――――――――――――――――――
 
   GET_MY_VENDOR_CATEGORIES(vendor_id: string | number) {
@@ -890,4 +892,12 @@ export class VAPI {
   ) {
     return `${this.selldone_vapi_url}/vendors/${vendor_id}/products/${product_id}/ai/spec`;
   }
+
+  //―――――――――――――――――――――― Shippings ――――――――――――――――――――
+  GET_MY_VENDOR_SHIPPING_SERVICES(vendor_id: string | number) {
+    return `${this.selldone_vapi_url}/vendors/${vendor_id}/shipping-services`;
+  }
+
+
+
 }
