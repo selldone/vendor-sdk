@@ -55,8 +55,6 @@ export class VAPI {
     return `${this.selldone_vapi_url}/vendor-request/attachments/${attachment_id}`;
   }
 
-
-
   GET_ADD_VENDOR_REQUEST(shop_id: string | number) {
     return `${this.selldone_vapi_url}/vendor-request/${shop_id}`;
   }
@@ -543,8 +541,6 @@ export class VAPI {
     return `${this.selldone_vapi_url}/vendors/${vendor_id}/products/${product_id}/cross-sells/${cross_sell_id}/translations/${key}`;
   }
 
-
-
   //―――――――――――――――――――――― Shop > Category ――――――――――――――――――――
 
   GET_MY_VENDOR_CATEGORIES(vendor_id: string | number) {
@@ -616,10 +612,10 @@ export class VAPI {
   }
 
   /*
-    PUT_MY_VENDOR_EDIT_PRODUCT_VENDOR(vendor_id,product_id,vendor_product_id) { // Replaced with :PUT_MY_VENDOR_INVENTORY_UPDATE_PRODUCT
-      return `${this.selldone_vapi_url}/vendors/${vendor_id}/products/${product_id}/vendors/${vendor_product_id}`;
-    }
-  */
+        PUT_MY_VENDOR_EDIT_PRODUCT_VENDOR(vendor_id,product_id,vendor_product_id) { // Replaced with :PUT_MY_VENDOR_INVENTORY_UPDATE_PRODUCT
+          return `${this.selldone_vapi_url}/vendors/${vendor_id}/products/${product_id}/vendors/${vendor_product_id}`;
+        }
+      */
 
   //―――――――――――――――――――――― Export ――――――――――――――――――――
   /**
@@ -897,6 +893,101 @@ export class VAPI {
   GET_MY_VENDOR_SHIPPING_SERVICES(vendor_id: string | number) {
     return `${this.selldone_vapi_url}/vendors/${vendor_id}/shipping-services`;
   }
+
+  GET_MY_VENDOR_AVAILABLE_TRANSPORTATIONS(vendor_id: string | number) {
+    return `${this.selldone_vapi_url}/vendors/${vendor_id}/transportations`;
+  }
+
+  GET_MY_VENDOR_TRANSPORTATION_SERVICES_OPTIONS(
+    vendor_id: string | number,
+    transportation_id: string | number,
+  ) {
+    return `${this.selldone_vapi_url}/vendors/${vendor_id}/transportations/${transportation_id}/delivery-services`;
+  }
+
+  POST_MY_VENDOR_TRANSPORTATION_SERVICES_ADD(
+    vendor_id: string | number,
+    transportation_id: string | number,
+  ) {
+    return `${this.selldone_vapi_url}/vendors/${vendor_id}/transportations/${transportation_id}/services`;
+  }
+
+  POST_MY_VENDOR_TRANSPORTATION_SERVICE_RESET(
+    vendor_id: string | number,
+    transportation_id: string | number,
+    service_id: string | number,
+  ) {
+    return `${this.selldone_vapi_url}/vendors/${vendor_id}/transportations/${transportation_id}/services/${service_id}/reset`;
+  }
+
+  GET_MY_VENDOR_DELIVERY_SERVICE_INFO(
+    vendor_id: string | number,
+    transportation_id: string | number,
+    service_id: string | number,
+  ) {
+    return `${this.selldone_vapi_url}/vendors/${vendor_id}/transportations/${transportation_id}/services/${service_id}`;
+  }
+
+  GET_MY_VENDOR_TRANSPORTATION_ORDERS(vendor_id: string | number) {
+    return `${this.selldone_vapi_url}/vendors/${vendor_id}/transportation-orders`;
+  }
+
+  POST_MY_VENDOR_TRANSPORTATION_ORDER_STATUS(
+    vendor_id: string | number,
+    transportation_id: string | number,
+    transportation_order_id: string | number,
+  ) {
+    return `${this.selldone_vapi_url}/vendors/${vendor_id}/transportations/${transportation_id}/orders/${transportation_order_id}`;
+  }
+
+  GET_MY_VENDOR_DELIVERY_SERVICE_ORDER_INFO(
+    vendor_id: string | number,
+    transportation_id: string | number,
+    delivery_service_id: string | number,
+    uid: string,
+  ) {
+    return `${this.selldone_vapi_url}/vendors/${vendor_id}/transportations/${transportation_id}/services/${delivery_service_id}/order/${uid}`;
+  }
+
+  PUT_MY_VENDOR_TRANSPORTATION_SERVICE_UPDATE(
+    vendor_id: string | number,
+    transportation_id: string | number,
+    service_id: string | number,
+  ) {
+    return `${this.selldone_vapi_url}/vendors/${vendor_id}/transportations/${transportation_id}/services/${service_id}`;
+  }
+
+  DELETE_MY_VENDOR_TRANSPORTATION_SERVICE(
+    vendor_id: string | number,
+    transportation_id: string | number,
+    service_id: string | number,
+  ) {
+    return `${this.selldone_vapi_url}/vendors/${vendor_id}/transportations/${transportation_id}/services/${service_id}`;
+  }
+
+
+  GET_MY_VENDOR_DELIVERY_SERVICE_PRICE(
+      vendor_id: string | number,
+      transportation_id: string | number,
+      service_id: string | number,
+  ) {
+    return `${this.selldone_vapi_url}/vendors/${vendor_id}/transportations/${transportation_id}/services/${service_id}/price`;
+  }
+
+  POST_MY_VENDOR_DELIVERY_SERVICE_ADD_ORDER(
+      vendor_id: string | number,
+      transportation_id: string | number,
+      delivery_service_id: string | number,
+  ) {
+    return `${this.selldone_vapi_url}/vendors/${vendor_id}/transportations/${transportation_id}/services/${delivery_service_id}/order`;
+  }
+
+
+  //―――――――――――――――――――――― Warehouse ――――――――――――――――――――
+  POST_MY_VENDOR_SHOP_WAREHOUSE_ADMIN(vendor_id: string | number) {
+    return `${this.selldone_vapi_url}/vendors/${vendor_id}/warehouse`;
+  }
+
 
 
 
