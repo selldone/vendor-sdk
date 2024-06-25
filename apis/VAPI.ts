@@ -982,6 +982,13 @@ export class VAPI {
     return `${this.selldone_vapi_url}/vendors/${vendor_id}/transportations/${transportation_id}/services/${delivery_service_id}/order`;
   }
 
+  PUT_MY_VENDOR_UPDATE_ORDER_RECEIVER_INFO(
+      vendor_id: string | number,
+      vendor_order_id: string | number,
+  ) {
+    return `${this.selldone_vapi_url}/vendors/${vendor_id}/orders/${vendor_order_id}/receiver-info`;
+  }
+
 
   //―――――――――――――――――――――― Warehouse ――――――――――――――――――――
   POST_MY_VENDOR_SHOP_WAREHOUSE_ADMIN(vendor_id: string | number) {
