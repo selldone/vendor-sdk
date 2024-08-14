@@ -997,5 +997,10 @@ export class VAPI {
 
 
 
+  POST_MY_VENDOR_AUGMENT_UPLOAD_IMAGE(vendor_id: string | number) {
+    return `${this.selldone_vapi_url}/vendors/${vendor_id}/augment/image`;
+  }
+
+
 
 }
