@@ -67,6 +67,19 @@ export class VAPI {
     return `${this.selldone_vapi_url}/vendors/${vendor_id}/icon`;
   }
 
+
+  PUT_MY_VENDOR_SET_TRANSLATIONS(
+      vendor_id: number | string,
+      key: string,
+  ) {
+    return `${this.selldone_vapi_url}/vendors/${vendor_id}/vendor/translations/${key}`;
+  }
+
+  POS_MY_VENDOR_TRANSLATE(vendor_id: string | number) {
+    return `${this.selldone_vapi_url}/vendors/${vendor_id}/translate`;
+  }
+
+
   //―――――――――――――――――――――― Orders ――――――――――――――――――――
 
   GET_MY_VENDORS_ORDERS(vendor_id: string | number, type: string) {
