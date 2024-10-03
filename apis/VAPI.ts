@@ -1014,6 +1014,49 @@ export class VAPI {
     return `${this.selldone_vapi_url}/vendors/${vendor_id}/augment/image`;
   }
 
+  //―――――――――――――――――――――― Access ――――――――――――――――――――
+  GET_MY_VENDOR_MEMBERS(vendor_id: string | number) {
+    return `${this.selldone_vapi_url}/vendors/${vendor_id}/members`;
+  }
+  POST_MY_VENDOR_ADD_MEMBER(vendor_id: string | number) {
+    return `${this.selldone_vapi_url}/vendors/${vendor_id}/members`;
+  }
+
+  PUT_MY_VENDOR_EDIT_MEMBER(
+      vendor_id: string | number,
+      member_id: string | number,
+  ) {
+    return `${this.selldone_vapi_url}/vendors/${vendor_id}/members/${member_id}`;
+  }
+
+  DELETE_MY_VENDOR_MEMBER(
+      vendor_id: string | number,
+      member_id: string | number,
+  ) {
+    return `${this.selldone_vapi_url}/vendors/${vendor_id}/members/${member_id}`;
+  }
+
+  DELETE_MY_VENDOR_INVITE(vendor_id: string | number, invite_id: string | number) {
+    return `${this.selldone_vapi_url}/vendors/${vendor_id}/invites/${invite_id}`;
+  }
+
+  PUT_MY_VENDOR_INVITE_ACTION(
+      vendor_id: string | number,
+      invite_id: string | number,
+      action: "ACCEPT" | "REJECT",
+  ) {
+    return `${this.selldone_vapi_url}/vendors/${vendor_id}/invites/${invite_id}/action/${action}`;
+  }
+
+
+
+  POST_MY_VENDOR_MY_MEMBERSHIP_LEAVE(
+      shop_id: string | number,
+      member_id: string | number,
+  ) {
+    return `${this.selldone_vapi_url}/vendors/${vendor_id}/members/${member_id}/leave`;
+  }
+
 
 
 }
