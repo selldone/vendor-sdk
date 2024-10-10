@@ -13,6 +13,7 @@
  */
 
 import {SetupService} from "@selldone/core-js/server/SetupService";
+import {TimelineEmailType} from "@selldone/core-js/enums/timeline/TimelineEmailType.ts";
 
 export class VAPI {
   selldone_vapi_url = "";
@@ -144,6 +145,14 @@ export class VAPI {
     return `${this.selldone_vapi_url}/vendors/${vendor_id}/orders/${basket_id}/service/${item_id}/tasks`;
   }
 
+
+  GET_MY_VENDOR_ORDER_EMAIL_PREVIEW(
+      vendor_id: string | number,
+      order_id: string | number,
+      email_type: TimelineEmailType,
+  ) {
+    return `${this.selldone_vapi_url}/vendors/${vendor_id}/timeline/orders/${order_id}/emails/${email_type}`;
+  }
   //―――――――――――――――――――――― Payments ――――――――――――――――――――
 
   GET_MY_VENDOR_PAYMENTS(vendor_id: string | number) {
