@@ -23,7 +23,7 @@ export default function vapiProductsListGet(
   limit: number,
   options?: vapi.products.list.get.IParams,
 ) {
-  const params = {offset: offset, limit: limit, ...options}
+  const params = { ...options,offset: offset, limit: limit}
   const url = window.VAPI.GET_MY_VENDOR_ALL_MY_PRODUCTS(vendor_id);
 
   return this.getNow<vapi.products.list.get.IResponse>(url,params)

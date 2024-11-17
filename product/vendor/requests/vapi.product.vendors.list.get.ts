@@ -22,7 +22,7 @@ export default function vapiProductVendorsListGet(
   limit: number,
   options?: vapi.product.vendors.list.get.IParams,
 ) {
-  const params = { offset: offset, limit: limit, ...options };
+  const params = { ...options,offset: offset, limit: limit };
   const url = window.VAPI.GET_MY_VENDOR_PRODUCT_VENDORS(vendor_id, product_id);
   return this.getNow<vapi.product.vendors.list.get.IResponse>(url, params);
 }

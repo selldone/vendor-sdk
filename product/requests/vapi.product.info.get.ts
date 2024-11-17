@@ -40,7 +40,7 @@ export default function vapiProductInfoGet(
   limit: number,
   options?: vapi.products.info.get.IParams,
 ) {
-  const params = { offset: offset, limit: limit, ...options };
+  const params = { ...options, offset: offset, limit: limit };
   const url = window.VAPI.GET_MY_VENDOR_PRODUCT_INFO_ADMIN(
     vendor_id,
     product_id,

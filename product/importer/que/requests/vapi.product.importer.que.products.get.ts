@@ -22,7 +22,7 @@ export default function apiProductImporterQueProductsGet(
   limit: number,
   options?: vapi.product.importer.que.products.get.IParams,
 ) {
-  const params = { offset: offset, limit: limit, ...options };
+  const params = { ...options,offset: offset, limit: limit };
   const url = window.VAPI.GET_MY_VENDOR_IMPORT_PRODUCTS_LIST(vendor_id);
   return this.getNow<vapi.product.importer.que.products.get.IResponse>(
     url,

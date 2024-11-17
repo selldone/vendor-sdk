@@ -22,7 +22,7 @@ export default function vapiProductImporterQueImagesGet(
   limit: number,
   options?: vapi.product.importer.que.images.get.IParams,
 ) {
-  const params = { offset: offset, limit: limit, ...options };
+  const params = {  ...options,offset: offset, limit: limit };
   const url = window.VAPI.GET_MY_VENDOR_IMPORT_IMAGES_LIST(shop_id);
   return this.getNow<vapi.product.importer.que.images.get.IResponse>(
     url,
