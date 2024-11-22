@@ -18,6 +18,7 @@ import {VendorAxiosSetup} from "./plugins/VendorAxiosSetup";
 import {VapiProduct} from "./product/VapiProduct";
 import {VapiArticle} from "./article/VapiArticle";
 import {VapiLogistic} from "./logistic/VapiLogistic";
+import {VapiCategory} from "@selldone/sdk-vendor/category/VapiCategory.ts";
 
 const SDK_VERSION = "0.02";
 // Extend the Window interface to recognize the properties you add to the global window object.
@@ -30,6 +31,7 @@ declare global {
     $vendor: {
       page: VapiPage;
       product: VapiProduct;
+      category: VapiCategory;
 
       // Article:
       article: VapiArticle;
@@ -55,6 +57,7 @@ export class VendorSDK {
     window.$vendor = {
       page: new VapiPage(),
       product: new VapiProduct(),
+      category: new VapiCategory(),
 
       // Article:
       article: new VapiArticle(),
