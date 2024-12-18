@@ -375,6 +375,26 @@ export class VAPI {
     return `${this.selldone_vapi_url}/vendors/${vendor_id}/pages/${page_id}/augment`;
   }
 
+
+
+  //―――――――――――――――――――――― Shop > Product > Property Set ――――――――――――――――――――
+
+  /**
+   * Assign proper set to product | Set custom variants label,icon and order
+   * @param shop_id
+   * @param product_id
+   * @constructor
+   */
+  PUT_MY_VENDOR_PRODUCT_SET_PROPERTY_SET(
+      shop_id: string | number,
+      product_id: number | string,
+  ) {
+    return `${this.selldone_vapi_url}/vendors/${vendor_id}/products/${product_id}/property-set`;
+  }
+
+
+
+
   POST_MY_VENDOR_PRODUCT_SET_OUTPUTS(
     vendor_id: string | number,
     product_id: string | number,
