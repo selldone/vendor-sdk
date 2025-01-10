@@ -402,6 +402,26 @@ export class VAPI {
     return `${this.selldone_vapi_url}/vendors/${vendor_id}/products/${product_id}/outputs`;
   }
 
+
+
+
+  /**
+   * Product Video
+   * @param vendor_id
+   * @param product_id
+   * @constructor
+   */
+  POST_MY_VENDOR_PRODUCT_VIDEO_UPLOAD(vendor_id: string | number, product_id: string | number) {
+    return `${this.selldone_vapi_url}/vendors/${vendor_id}/products/${product_id}/videos`;
+  }
+  DELETE_MY_VENDOR_PRODUCT_VIDEO(vendor_id: string | number, product_id: string | number, video_id: string | number) {
+    return `${this.selldone_vapi_url}/vendors/${vendor_id}/products/${product_id}/videos/${video_id}`;
+  }
+
+
+
+
+
   GET_MY_VENDOR_SEARCH_PRODUCT_REPOSITORY_SKU() {
     return `${this.selldone_vapi_url}/product-repository/search`;
   }
