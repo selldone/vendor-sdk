@@ -1108,4 +1108,22 @@ export class VAPI {
 
 
 
+  /**
+   * params: count_adjustment | Negative count_adjustment: means less will be shipped | Positive count_adjustment: means more will bve shipped
+   * @param vendor_id
+   * @param vendor_order_id
+   * @param basket_item_id
+   * @constructor
+   */
+  PUT_MY_VENDOR_ORDER_ITEM_SET_COUNT_ADJUSTMENT(
+      vendor_id: string | number,
+      vendor_order_id: string | number,
+      basket_item_id: string | number,
+  ) {
+    return `${this.selldone_vapi_url}/vendors/${vendor_id}/orders/${vendor_order_id}/items/${basket_item_id}/count-adjustment`;
+  }
+
+
+
+
 }
