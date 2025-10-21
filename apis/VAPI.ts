@@ -1125,5 +1125,35 @@ export class VAPI {
 
 
 
+  // ―――――――――― Shop ▶ Logistic ▶ Transportations ▶ Boxes ――――――――――
+
+  GET_MY_VENDOR_BOXES(
+    vendor_id: string | number,
+  ) {
+    return `${this.selldone_vapi_url}/vendors/${vendor_id}/boxes`;
+  }
+
+
+  POST_MY_VENDOR_BOXES_ADD(
+    vendor_id: string | number,
+  ) {
+    return `${this.selldone_vapi_url}/vendors/${vendor_id}/boxes`;
+  }
+
+  PUT_MY_VENDOR_BOXES_EDIT(
+    vendor_id: string | number,
+    box_uid: string,
+  ) {
+    return `${this.selldone_vapi_url}/vendors/${vendor_id}/boxes/${box_uid}`;
+  }
+
+
+  DELETE_MY_VENDOR_BOX(
+    vendor_id: string | number,
+    box_uid: string,
+  ) {
+    return `${this.selldone_vapi_url}/vendors/${vendor_id}/boxes/${box_uid}`;
+  }
+
 
 }
