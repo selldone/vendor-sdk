@@ -1156,4 +1156,158 @@ export class VAPI {
   }
 
 
+
+
+
+
+
+
+
+
+
+
+  // ―――――――――― Shop ▶ Listing ――――――――――
+
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+// Vendor ▶ Listing ▶ Items
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  GET_MY_VENDOR_LISTING_ITEMS(vendor_id: string | number) {
+    return `${this.selldone_vapi_url}/vendors/${vendor_id}/listing/items`;
+  }
+
+  POST_MY_VENDOR_LISTING_ITEM_ADD(vendor_id: string | number) {
+    return `${this.selldone_vapi_url}/vendors/${vendor_id}/listing/items`;
+  }
+
+  POST_MY_VENDOR_LISTING_ITEM_EDIT(vendor_id: string | number, item_id: string | number) {
+    return `${this.selldone_vapi_url}/vendors/${vendor_id}/listing/items/${item_id}`;
+  }
+
+  DELETE_MY_VENDOR_LISTING_ITEM(vendor_id: string | number, item_id: string | number) {
+    return `${this.selldone_vapi_url}/vendors/${vendor_id}/listing/items/${item_id}`;
+  }
+
+
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+// Vendor ▶ Listing ▶ Companies
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  GET_MY_VENDOR_LISTING_COMPANIES(vendor_id: string | number) {
+    return `${this.selldone_vapi_url}/vendors/${vendor_id}/listing/companies`;
+  }
+
+  POST_MY_VENDOR_LISTING_COMPANY_ADD(vendor_id: string | number) {
+    return `${this.selldone_vapi_url}/vendors/${vendor_id}/listing/companies`;
+  }
+
+  POST_MY_VENDOR_LISTING_COMPANY_EDIT(vendor_id: string | number, company_id: string | number) {
+    return `${this.selldone_vapi_url}/vendors/${vendor_id}/listing/companies/${company_id}`;
+  }
+
+  DELETE_MY_VENDOR_LISTING_COMPANY(vendor_id: string | number, company_id: string | number) {
+    return `${this.selldone_vapi_url}/vendors/${vendor_id}/listing/companies/${company_id}`;
+  }
+
+
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+// Vendor ▶ Listing ▶ Messages
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  GET_MY_VENDOR_LISTING_MESSAGES(vendor_id: string | number) {
+    return `${this.selldone_vapi_url}/vendors/${vendor_id}/listing/messages`;
+  }
+
+  POST_MY_VENDOR_LISTING_MESSAGE_REPLY(vendor_id: string | number, message_id: string | number) {
+    return `${this.selldone_vapi_url}/vendors/${vendor_id}/listing/messages/${message_id}/reply`;
+  }
+
+  POST_MY_VENDOR_LISTING_MESSAGE_STATUS(vendor_id: string | number, message_id: string | number) {
+    return `${this.selldone_vapi_url}/vendors/${vendor_id}/listing/messages/${message_id}/status`;
+  }
+
+  DELETE_MY_VENDOR_LISTING_MESSAGE(vendor_id: string | number, message_id: string | number) {
+    return `${this.selldone_vapi_url}/vendors/${vendor_id}/listing/messages/${message_id}`;
+  }
+
+  POST_MY_VENDOR_LISTING_MESSAGE_RESTORE(vendor_id: string | number, message_id: string | number) {
+    return `${this.selldone_vapi_url}/vendors/${vendor_id}/listing/messages/${message_id}/restore`;
+  }
+
+
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+// Vendor ▶ Listing ▶ Badges
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  GET_MY_VENDOR_LISTING_BADGES(vendor_id: string | number) {
+    return `${this.selldone_vapi_url}/vendors/${vendor_id}/listing/badges`;
+  }
+
+
+
+
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+// Vendor ▶ Listing ▶ Item ▶ Media
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  GET_MY_VENDOR_LISTING_ITEM_MEDIA_LIST(vendor_id: string | number, item_id: string | number) {
+    return `${this.selldone_vapi_url}/vendors/${vendor_id}/listing/items/${item_id}/media`;
+  }
+
+  POST_MY_VENDOR_LISTING_ITEM_MEDIA_IMAGES(vendor_id: string | number, item_id: string | number) {
+    return `${this.selldone_vapi_url}/vendors/${vendor_id}/listing/items/${item_id}/media/images`;
+  }
+
+  POST_MY_VENDOR_LISTING_ITEM_MEDIA_URL(vendor_id: string | number, item_id: string | number) {
+    return `${this.selldone_vapi_url}/vendors/${vendor_id}/listing/items/${item_id}/media/url`;
+  }
+
+  PUT_MY_VENDOR_LISTING_ITEM_MEDIA_MAIN(vendor_id: string | number, item_id: string | number, media_id: string | number) {
+    return `${this.selldone_vapi_url}/vendors/${vendor_id}/listing/items/${item_id}/media/${media_id}/main`;
+  }
+
+  POST_MY_VENDOR_LISTING_ITEM_MEDIA_EDIT(vendor_id: string | number, item_id: string | number, media_id: string | number) {
+    return `${this.selldone_vapi_url}/vendors/${vendor_id}/listing/items/${item_id}/media/${media_id}`;
+  }
+
+  DELETE_MY_VENDOR_LISTING_ITEM_MEDIA(vendor_id: string | number, item_id: string | number, media_id: string | number) {
+    return `${this.selldone_vapi_url}/vendors/${vendor_id}/listing/items/${item_id}/media/${media_id}`;
+  }
+
+
+
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+// Vendor ▶ Listing ▶ Reviews
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  GET_MY_VENDOR_LISTING_REVIEWS(vendor_id: string | number) {
+    return `${this.selldone_vapi_url}/vendors/${vendor_id}/listing/reviews`;
+  }
+
+  POST_MY_VENDOR_LISTING_REVIEW_REPLY(vendor_id: string | number, review_id: string | number) {
+    return `${this.selldone_vapi_url}/vendors/${vendor_id}/listing/reviews/${review_id}/reply`;
+  }
+
+  DELETE_MY_VENDOR_LISTING_REVIEW(vendor_id: string | number, review_id: string | number) {
+    return `${this.selldone_vapi_url}/vendors/${vendor_id}/listing/reviews/${review_id}`;
+  }
+
+  POST_MY_VENDOR_LISTING_REVIEW_RESTORE(vendor_id: string | number, review_id: string | number) {
+    return `${this.selldone_vapi_url}/vendors/${vendor_id}/listing/reviews/${review_id}/restore`;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
