@@ -20,6 +20,7 @@ export default function vapiProductImporterPost(
   this: VapiProductImporter,
   vendor_id: number,
   dataset: (IHeader | IProduct)[],
+  keep_image_urls = true,
 ) {
   // Check if the first row of the dataset is an IHeader (array of strings)
   if (
@@ -31,7 +32,7 @@ export default function vapiProductImporterPost(
     );
   }
 
-  const params = { dataset: dataset };
+  const params = { dataset: dataset, keep_image_urls: keep_image_urls };
   const url = window.VAPI.POST_MY_VENDOR_IMPORT_PRODUCTS(vendor_id);
   return this.postNow<vapi.product.importer.post.IResponse>(url, params);
 }
