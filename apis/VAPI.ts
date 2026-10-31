@@ -1002,6 +1002,14 @@ export class VAPI {
     return `${this.selldone_vapi_url}/vendors/${vendor_id}/transportations/${transportation_id}/orders/${transportation_order_id}`;
   }
 
+  GET_MY_VENDOR_DELIVERY_SERVICE_PROFILE(
+    vendor_id: string | number,
+    transportation_id: string | number,
+    service_id: string | number,
+  ) {
+    return `${this.selldone_vapi_url}/vendors/${vendor_id}/transportations/${transportation_id}/services/${service_id}/profile`;
+  }
+
   GET_MY_VENDOR_DELIVERY_SERVICE_ORDER_INFO(
     vendor_id: string | number,
     transportation_id: string | number,
