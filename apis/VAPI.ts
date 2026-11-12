@@ -418,18 +418,6 @@ export class VAPI {
     return `${this.selldone_vapi_url}/vendors/${vendor_id}/products/${product_id}/videos/${video_id}`;
   }
 
-
-
-
-
-  GET_MY_VENDOR_SEARCH_PRODUCT_REPOSITORY_SKU() {
-    return `${this.selldone_vapi_url}/product-repository/search`;
-  }
-
-  POST_MY_VENDOR_ADD_PRODUCT_BY_REPOSITORY(vendor_id: string | number) {
-    return `${this.selldone_vapi_url}/vendors/${vendor_id}/product-repository/add`;
-  }
-
   POST_MY_VENDOR_UPLOAD_PRODUCT_MAIN_IMAGE(
     vendor_id: string | number,
     product_id: string | number,
